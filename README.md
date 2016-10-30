@@ -1,1 +1,1 @@
-A project utilzing the Ionic framework with Cordova. The app is a way to keep track of items that need to regulary be bought. 
+A project utilzing the Ionic framework with Cordova. The app is a way to keep track of items that need to regulary be bought. More info about the framework and setup can be found here: http://ionicframework.com/ . Setup information for visual studio can be found here: https://taco.visualstudio.com/en-us/docs/tutorial-ionic/ .
