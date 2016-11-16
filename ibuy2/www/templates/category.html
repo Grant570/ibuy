@@ -1,11 +1,11 @@
 ﻿
 <ion-view view-title="Category" ng-controller="CategoryCtrl">
-    <ion-header-bar class="bar-stable">
-        <button class="button button-icon icon ion-ios-minus-outline"
+    <ion-header-bar class="bar bar-header bar-positive">
+        <button class="button button-assertive icon ion-android-remove-circle"
                 ng-click="data.showDelete = !data.showDelete; data.showReorder = false"></button>
         <h1 class="title">Items for {{category}}</h1>
         <div class="buttons">
-            <button class="button icon ion-plus-round" ng-click="modal.show()"></button>
+            <button class="button icon ion-android-add button-balanced" ng-click="modal.show()"></button>
         </div>
 
     </ion-header-bar>

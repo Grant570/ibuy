@@ -36,9 +36,6 @@
         showDelete: false
     };
 
-   
-
-
     $scope.openModal = function () {
         $scope.modal.show();
     };
@@ -80,8 +77,10 @@
     };
     
     $scope.addCat = function (category) {
-        $scope.categories.push(category);
-        localStorage.setItem("categories", JSON.stringify($scope.categories));
+        if (category !== '') {
+            $scope.categories.push(category);
+            localStorage.setItem("categories", JSON.stringify($scope.categories));
+        }
     };
     console.log("categories and stuff");
     console.log($scope.categories);
@@ -157,6 +156,7 @@
     };
 
     $scope.addItem = function (item) {
+        if(item !== ""){
         items = JSON.parse(localStorage.getItem("items")) || {};
         name = item.name;
         if (items[category] === undefined) {
@@ -168,6 +168,7 @@
         }
         localStorage.setItem("items", JSON.stringify(items));
         $scope.items = items[category];
+        }
     };
     //console.log(items);
 });

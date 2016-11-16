@@ -1,9 +1,9 @@
 ﻿<ion-view view-title="Categories">
-    <ion-header-bar class="bar-stable">
-        <button class="button button-icon icon ion-ios-minus-outline"
+    <ion-header-bar class="bar bar-header bar-positive">
+        <button class="button button-assertive icon ion-android-remove-circle"
                 ng-click="data.showDelete = !data.showDelete; data.showReorder = false"></button>
         <h1 class="title">Categories</h1>
-        <button class="button icon ion-plus-round" ng-click="modal.show()"></button>
+        <button class="button icon ion-android-add button-balanced" ng-click="modal.show()"></button>
     </ion-header-bar>
     <ion-content>
         <ion-list show-delete="data.showDelete">
