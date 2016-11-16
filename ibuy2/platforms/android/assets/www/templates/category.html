@@ -1,15 +1,24 @@
 ﻿
 <ion-view view-title="Category" ng-controller="CategoryCtrl">
     <ion-header-bar class="bar-stable">
-        <h1 class="title">Items</h1>
-        <button class="button icon ion-plus-round" ng-click="modal.show()"></button>
+        <button class="button button-icon icon ion-ios-minus-outline"
+                ng-click="data.showDelete = !data.showDelete; data.showReorder = false"></button>
+        <h1 class="title">Items for {{category}}</h1>
+        <div class="buttons">
+            <button class="button icon ion-plus-round" ng-click="modal.show()"></button>
+        </div>
+
     </ion-header-bar>
-    <ion-content>
         <ion-content>
-            <ion-list>
-                <ion-checkbox ng-repeat="item in items">
-                    {{item.name}}
-                </ion-checkbox>
+            <ion-list show-delete="data.showDelete" ng-repeat="(itemName,ischecked) in items">
+                <ion-item class="item-remove-animate">
+                    <ion-delete-button class="ion-minus-circled"
+                                       ng-click="onItemDelete(itemName)">
+                    </ion-delete-button>
+                    <ion-checkbox ng-checked="ischecked == 'checked'" ng-model="item" ng-click="checked(item, itemName)">
+                        {{itemName}}
+                    </ion-checkbox>
+                </ion-item>
             </ion-list>
-        </ion-content>
+        <!--</ion-content>-->
 </ion-view>
