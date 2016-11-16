@@ -11,14 +11,17 @@
     </ion-header-bar>
         <ion-content>
             <ion-list show-delete="data.showDelete" ng-repeat="(itemName,ischecked) in items">
-                <ion-item class="item-remove-animate">
-                    <ion-delete-button class="ion-minus-circled"
-                                       ng-click="onItemDelete(itemName)">
-                    </ion-delete-button>
-                    <ion-checkbox ng-checked="ischecked == 'checked'" ng-model="item" ng-click="checked(item, itemName)">
-                        {{itemName}}
-                    </ion-checkbox>
-                </ion-item>
+                    <ion-item class="item-remove-animate">
+                        <div class="test">
+                            <ion-delete-button class="ion-minus-circled"
+                                               ng-click="onItemDelete(itemName)">
+                            </ion-delete-button>
+                            <ion-checkbox class="mycheckbox" ng-checked="ischecked == 'checked'" ng-model="item" ng-click="checked(item, itemName)">
+                                {{itemName}}
+                            </ion-checkbox>
+                        </div>
+</ion-item>
+                
             </ion-list>
-        <!--</ion-content>-->
+        </ion-content>
 </ion-view>
